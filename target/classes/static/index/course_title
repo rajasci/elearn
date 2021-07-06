@@ -1,0 +1,8 @@
+<!DOCTYPE Html>
+<head>
+<title>Suggest a title</title>
+</head>
+<body>
+<h4>Suggest a course title </h4>
+<form>
+<input type="text" id="course_title">

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+
+    <title>Registration</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+     <span class="sr-only">Toggle navigation</span> <span
+      class="icon-bar"></span> <span class="icon-bar"></span> <span
+      class="icon-bar"></span>
+    </button>
+                <a class="navbar-brand" href="#" th:href="@{/}">Registration and
+     Login Module</a>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+    
+     <div class="panel panel-default container">
+  	<div class="panel-body">published courses</div>
+  	<table>
+  	<tbody>
+  	
+  					<tr>	
+  				<td th:each="courselist: ${contentlist}">
+  						
+  						<div class="card" style="width: 18rem;">
+  							<img class="card-img-top" src="" alt="Card image cap">
+  						<div class="card-body">
+    					
+    					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    					<a href="#" class="btn btn-primary">Go somewhere</a>
+    					
+  						</div>
+						</div>
+					</td>
+				</tr>
+	</tbody>
+	</table>
+  	<div>
+  
+  </div>
+</div>
+    
+    
+    
+    
+    
+    
+    
+    
+    <h5 class="card-title" th:text="${msg}" >Card title</h5>
+    
+    <a th:href="@{/trainer/addcontent(param1=${sid},param2=${uid})}" class="btn btn-primary" >Delete</a>
+
+    <div class="panel panel-default container" style="padding-top:100px;">
+    
+    
+    
+<form action="/">
+  <fieldset>
+    <legend>Personal:</legend>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+<h5 class="card-title" th:text="${cid}">Card title</h5>
+</div>
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+</body>
+</html>

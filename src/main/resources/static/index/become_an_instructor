@@ -1,0 +1,14 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<title> Become an instructor </title>
+</head>
+<body>
+	<style>
+		body {
+      	background-image: url('Teach.jpeg');
+      	background-repeat: no-repeat;
+      	background-attachment: fixed;  
+      	background-size:1518px 665px;
+     	}
+     </style>

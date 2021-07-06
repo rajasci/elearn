@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+
+    <title>Registration</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+     <span class="sr-only">Toggle navigation</span> <span
+      class="icon-bar"></span> <span class="icon-bar"></span> <span
+      class="icon-bar"></span>
+    </button>
+                <a class="navbar-brand" href="#" th:href="@{/}">Registration and
+     Login Module</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li sec:authorize="isAuthenticated()"><a th:href="@{/teacher/logout}">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+    
+    <div class="container">
+        <h2> User Registration and Login Module using Spring Boot, Spring MVC, Spring Security, JPA/Hibernate and Thymeleaf</h2>
+
+        <p>
+            Welcome <span sec:authentication="principal.username">User</span>
+        </p>
+    </div>
+
+
+ <div class="panel panel-default container">
+  	<div class="panel-body">published courses</div>
+  	<table>
+  	<tbody>
+  	
+  					<tr>	
+  				<td th:each="courselist: ${courselist}">
+  						
+  					
+    					
+				
+					<div class="row align-items-center justify-content-center">
+					
+    						
+							<div class="row align-items-center justify-content-center">
+    							<video width="1000" height="400" id="cspd_video" controls>
+    							
+        							<source th:src="@{vedios(param1=${courselist.content_id})}" type="video/mp4">
+    							</video>
+    			
+							</div>
+							
+							
+					
+  						</div>
+						</div>
+					</td>
+				</tr>
+	</tbody>
+	</table>
+  	<div>
+  
+  </div>
+</div>
+
+
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+    <script>
+    var theVideo = document.getElementById("cspd_video");
+  document.onkeydown = function(event) {
+      switch (event.keyCode) {
+         case 37:
+              event.preventDefault();
+              
+              vid_currentTime = theVideo.currentTime;
+              theVideo.currentTime = vid_currentTime - 5;
+            break;
+         
+         case 39:
+              event.preventDefault();
+              
+              vid_currentTime = theVideo.currentTime;
+              theVideo.currentTime = vid_currentTime + 5;
+            break;
+         
+      }
+  };
+  </script>
+
+</body>
+
+</html>

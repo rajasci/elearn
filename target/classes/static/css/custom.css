@@ -1,0 +1,32 @@
+.bg-banner {
+    background-image: url(../images/bg2.jpg);
+    background-size: 100%;
+    border-radius: 0%;
+    /* background-repeat: no-repeat; */
+}
+
+.color-grad {
+    background: linear-gradient(to left, #ec5252, #6e1a52);
+}
+
+.badge-style {
+    position: absolute;
+    z-index: 0;
+    margin-top: 10px;
+}
+
+.rounded-radius-right {
+    border-radius: 0px 5px 5px 0px;
+}
+
+.rounded-radius-left {
+    border-radius: 5px 0px 0px 5px;
+}
+
+.badge-radius {
+    border-radius: 0px 50% 50% 0px;
+}
+/* login forms starts here  */
+
+
+/* login forms ends  here  */

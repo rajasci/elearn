@@ -1,0 +1,70 @@
+ <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+   <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="stylesheet" type="text/css" th:href="@{./css/login.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+    <title>login form</title>
+</head>
+<body>
+    <div class="uppercontainer">
+        <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" onclick="login()">Sign In</button>
+            <button type="button" class="toggle-btn" onclick="register()">Sign Up</button>
+        </div>
+        <div class="social-icons">
+            <img th:src="@{images/fb.png}">
+            <img src="./images/tw.png">
+            <img src="./images/gp.png">
+        </div>
+        <form id="login" class="input-group">
+            <input type="text" class="input-field" placeholder="User Id" required><br> <br>
+            <input type="password" class="input-field" placeholder="Enter Password" required>
+            <br><br>
+            <input type="checkbox" class="chech-box"><span>Remember Password</span>
+           
+            <button type="submit" class="submit-btn">Log in</button>
+        </form>
+        <form id="register" class="input-group">
+            <input type="text" class="input-field" placeholder="Enter Your Name" required>
+            <input type="text" class="input-field" placeholder="Create User Id" required>
+            <input type="date" class="input-field" placeholder="Course Start Date " required>
+            <input type="email" class="input-field" placeholder="Email Id" required>
+            <input type="password" class="input-field" placeholder="Enter Password" required>
+            <input type="checkbox" class="chech-box"><span>I agree to the terms & conditions</span>
+            <button type="submit" class="submit-btn">Register</button>
+        </form>
+    </div>
+            
+        </div>
+        
+        
+    <script>
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+    var z = document.getElementById("btn");
+    
+    function register(){
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+    }
+    function login(){
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0";
+    }
+    
+    
+    </script>
+        
+       
+          
+</body>
+</html>

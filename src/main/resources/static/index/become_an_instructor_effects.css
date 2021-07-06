@@ -1,0 +1,20 @@
+.sub
+{
+font-variant:small-caps;
+font-weight:bold;
+display:block;
+width:250px;
+height:45px;
+padding:7px;
+background: white;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    }

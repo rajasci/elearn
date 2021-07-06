@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+     <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+     <!-- custom stylesheet -->
+     
+     <link rel="stylesheet" th:href="@{index/css/custom.css}">
+     <link rel="stylesheet" th:href="@{index/css/login.css}">
+    
+
+    <title>Registration</title>
+</head>
+<body>
+    
+ 	<nav class="navbar navbar-expand-lg navbar-light bg-white">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto container-fluid">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-list-ul"></i>
+                        Categories
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+
+                <li class="nav-item col-8">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control form-control-lg col-9 bg-light border-0 rounded-radius-left" type="search" placeholder="Search for Courses" aria-label="Search">
+                        <button class="btn btn-lg btn-light col-2 my-2 my-sm-0 ml-0 rounded-radius-right" type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </li>
+            </ul>
+
+            <a class="btn btn-light mx-2" href="login2.html" data-toggle="popover" data-trigger="focus" data-content="Get your team access to LearnIt's top 2,500 courses anytime, anywhere" title="Try LearnIt for Business" data-placement="bottom" >LearnIt for Business</a>
+            <a class="btn btn-light mx-2" href="trainer/login">Become an Instructor</a>
+            <a class="btn btn-light mx-2 rounded-circle" href="#"><i class="fa fa-shopping-cart"></i></a>
+            <!-- <a class="btn btn-success mx-1" href="#">Login</a> -->
+            <a class="btn btn-danger mx-1" href="/employee/login">Sign In/Up</a>
+            
+
+           
+        </div>
+    </nav>
+
+    <!-- Body starts here -->
+    <div class="jumbotron mb-0 bg-banner" style="height:500px; padding-top:150px">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col">
+                    <div class="col-md-4 text-light">
+                        <h1 class="display-5">Hot Sale - $9.99 courses</h1>
+                        <p class="lead">Get our best deal on courses!</p>
+                    </div>
+                    <div class="col-md-6">  
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control form-control-lg col-9 border-right-0 rounded-radius-left" type="search" placeholder="what do you want to learn!" aria-label="Search">
+                            <button class="btn btn-lg btn-danger border-left-0 rounded-radius-right col-2 my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="color-grad text-light py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="media">
+                        <i class="fa fa-play-circle mr-3"></i>
+                        <div class="media-body">
+                            <h5 class="mt-0">Fresh Content</h5>
+                            <p>Choose from 65,000 courses with new additions published every month!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="media">
+                        <i class="fa fa-certificate mr-3"></i>
+                        <div class="media-body">
+                            <h5 class="mt-0">Trusted Instructors</h5>
+                            <p>Take courses taught by industry experts around the world!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="media">
+                        <i class="fa fa-spinner mr-3"></i>
+                        <div class="media-body">
+                            <h5 class="mt-0">Flexible Learning</h5>
+                            <p>learn on your terms with lifetime course access and the LearnIt mobile app</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3><small class="text-muted">Top Courses for "Business"</small></h3>
+        <div class="card-deck">
+            <div class="card mx-1">
+                <span class="badge badge-info w-50 badge-style rounded-radius-right">BEST SELLER</span>
+                <img class="card-img-top" src="images/bg1.jpg" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                            <small><strong>$9.99</strong></small>
+                        </span> 
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <span class="badge badge-info w-50 badge-style rounded-radius-right">BEST SELLER</span>
+                <img class="card-img-top" src="images/bg3.jpg" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                            <small><strong>$9.99</strong></small>
+                        </span> 
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <span class="badge badge-warning w-50 badge-style rounded-radius-right">TOP RATED</span>
+                <img class="card-img-top" src="images/bg2.jpg" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                            <small><strong>$9.99</strong></small>
+                        </span> 
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <img class="card-img-top" src="images/bg1.jpg" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                            <small><strong>$9.99</strong></small>
+                        </span> 
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <img class="card-img-top" src="images/bg3.jpg" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                            <small><strong>$9.99</strong></small>
+                        </span> 
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="container mt-5">
+        <h3><small class="text-muted">Top Courses for "Development"</small></h3>
+        <div class="card-deck">
+            <div class="card mx-1">
+                <span class="badge badge-info w-50 badge-style rounded-radius-right">BEST SELLER</span>
+                <img class="card-img-top" src="images/bg1.jpg" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                            <small><strong>$9.99</strong></small>
+                        </span> 
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <span class="badge badge-info w-50 badge-style rounded-radius-right">BEST SELLER</span>
+                <img class="card-img-top" src="images/bg3.jpg" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                            <small><strong>$9.99</strong></small>
+                        </span> 
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <span class="badge badge-warning w-50 badge-style rounded-radius-right">TOP RATED</span>
+                <img class="card-img-top" src="images/bg2.jpg" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                            <small><strong>$9.99</strong></small>
+                        </span> 
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <img class="card-img-top" src="images/bg1.jpg" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                            <small><strong>$9.99</strong></small>
+                        </span> 
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <img class="card-img-top" src="images/bg3.jpg" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                            <small><strong>$9.99</strong></small>
+                        </span> 
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3><small class="text-muted">Top Courses for "Design"</small></h3>
+        <div class="card-deck">
+            <div class="card mx-1">
+                <span class="badge badge-info w-50 badge-style rounded-radius-right">BEST SELLING</span>
+                <img class="card-img-top" src="images/bg1.jpg" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                            <small><strong>$9.99</strong></small>
+                        </span> 
+                    </p>
+                </div>
+            </div>
+             <div class="card mx-1">
+                <span class="badge badge-info w-50 badge-style rounded-radius-right">BEST SELLING</span>
+                <img class="card-img-top" src="images/bg1.jpg" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                            <small><strong>$9.99</strong></small>
+                        </span> 
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <span class="badge badge-info w-50 badge-style rounded-radius-right">BEST SELLING</span>
+                <img class="card-img-top" src="images/bg3.jpg" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                            <small><strong>$9.99</strong></small>
+                        </span> 
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <span class="badge badge-warning w-50 badge-style rounded-radius-right">TOP RATED</span>
+                <img class="card-img-top" src="images/bg2.jpg" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                            <small><strong>$9.99</strong></small>
+                        </span> 
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <img class="card-img-top" src="images/bg1.jpg" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                            <small><strong>$9.99</strong></small>
+                        </span> 
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mx-1">
+                <img class="card-img-top" src="images/bg3.jpg" alt="image">
+                <div class="card-body px-2">
+                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
+                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star-half text-warning"></i>
+                        4.5 (18,560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
+                            <small><strong>$9.99</strong></small>
+                        </span> 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container mt-5">
+        <h3><small class="text-muted">Discover Our Popular Courses</small></h3>
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="#" class="btn btn-lg btn-block btn-info">TOP RATED</a>
+            </div>
+            <div class="col-sm-4">
+                <a href="#" class="btn btn-lg btn-block btn-secondary">TRENDING</a>
+            </div>
+            <div class="col-sm-4">
+                <a href="#" class="btn btn-lg btn-block btn-primary">NEW & NOTEWORTHY</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3><small class="text-muted">Achieve Your Goals</small></h3>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="#">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid rounded" alt="Image here" src="images/bg3.jpg">
+                        <figcaption class="figure-caption text-center text-info">Expanding Your Programming Knowledge</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid rounded" alt="Image here" src="images/bg1.jpg">
+                        <figcaption class="figure-caption text-center text-info">Be Your Own Boss</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid rounded" alt="Image here" src="images/bg2.jpg">
+                        <figcaption class="figure-caption text-center text-info">Land an Exciting New Tech Job</figcaption>
+                    </figure>
+                </a>
+            </div>
+        </div>
+
+        <!-- second row starts here -->
+        <div class="row">
+            <div class="col-md-3">
+                <a href="#">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid rounded" alt="Image here" src="images/bg1.jpg">
+                        <figcaption class="figure-caption text-center text-info">Indulge Your Curiosity</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid rounded" alt="Image here" src="images/bg3.jpg">
+                        <figcaption class="figure-caption text-center text-info">Invest in Your Passion</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid rounded" alt="Image here" src="images/bg2.jpg">
+                        <figcaption class="figure-caption text-center text-info">Unlock Your Potential</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid rounded" alt="Image here" src="images/bg1.jpg">
+                        <figcaption class="figure-caption text-center text-info">Make Analytics Work for You</figcaption>
+                    </figure>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h3><small class="text-muted">Featured Topics</small></h3>
+        <div class="row">
+            <a href="#" class="btn btn-light shadow">Photography</a>
+            <a href="#" class="btn btn-light shadow mx-1">Digital Marketing</a>
+            <a href="#" class="btn btn-light shadow mx-1">Project Management</a>
+            <a href="#" class="btn btn-light shadow mx-1">Graphic Design</a>
+            <a href="#" class="btn btn-light shadow mx-1">Web Design</a>
+            <a href="#" class="btn btn-light shadow mx-1">Data Science</a>
+            <a href="#" class="btn btn-light shadow mx-1">Python</a>
+            <a href="#" class="btn btn-light shadow mx-1">SQL</a>
+            <a href="#" class="btn btn-light shadow mx-1">Piano</a>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top:120px;">
+        <div class="row">
+            <div class="col text-center border-right">
+                <div class="col-8 offset-2">
+                    <h4>Become an Instructor</h4>
+                    <p class="lead" style="font-size:15px;">Teach what you love! LearnIt gives you the tools to create an online course.</p>
+                    <a href="#" class="btn btn-danger btn-lg">Start Teaching</a>
+                </div>
+            </div>
+            <div class="col text-center">
+                <div class="col-8 offset-2">
+                    <a href="login2.html"> <h4>LearnIt for Business</h4></a>
+                    <p class="lead" style="font-size:15px;">Get unlimited access to 2,500 of LearnIt's top courses for your team.</p>
+                    <a href="login2.html" class="btn btn-danger btn-lg">Get LearnIt for Business</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5 border-top px-5 pt-5" style="font-size:13px;">
+        <div class="col">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="login2.html" class="nav-link text-info"><strong>LearnIt for Business</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-info"><strong>Become an Instructor</strong></a>
+                </li> 
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-info">Mobile Apps</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-info">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-info">Careers</a>
+                </li> 
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-info">Blog</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-info">Topics</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-info">Support</a>
+                </li> 
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-info">Affiliate</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col">
+            <form>
+                <div class="form-group col-7 float-right">
+                    <select class="form-control">
+                        <option><i class="fa fa-bin"></i> English</option>
+                        <option>Yoruba</option>
+                        <option>Igbo</option>
+                        <option>Hausa</option>
+                        <option>Efik</option>
+                        <option>Tiv</option>
+                    </select> 
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <nav class="nav mt-5 ml-5" style="font-size:12px;">
+            <span class="nav-link text-muted font-weight-bold">Local Home Pages:</span>
+            <span class="nav-link text-muted">English</span>
+            <a href="#" class="text-info nav-link">Deutsch</a>
+            <a href="#" class="text-info nav-link">Espanyol</a>
+            <a href="#" class="text-info nav-link">Francais</a>
+            <a href="#" class="text-info nav-link">Portuguese</a>
+            <a href="#" class="text-info nav-link">æ—¥æœ¬èªž</a>
+        </nav>
+        <hr>
+    </div>
+
+    <div class="row" style="font-size:13px">
+        <div class="col">
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="#">Terms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="#">Privacy Policy and Cookie Policy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="#">Intellectual Property</a>
+                </li> 
+            </ul>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+    <!-- initialize popover library -->
+    <script>
+        $(function(){
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>

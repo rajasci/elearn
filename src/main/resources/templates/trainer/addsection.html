@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+
+    <title>Registration</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+     <span class="sr-only">Toggle navigation</span> <span
+      class="icon-bar"></span> <span class="icon-bar"></span> <span
+      class="icon-bar"></span>
+    </button>
+                <a class="navbar-brand" href="#" th:href="@{/}">Registration and
+     Login Module</a>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+
+                <div th:if="${param.success}">
+                    <div class="alert alert-info">You've successfully registered to our awesome app!</div>
+                </div>
+
+                <h1>Registration</h1>
+                <form th:action="@{/trainer/addsection}" th:object="${contents}" method="post">
+
+                    <h5 class="card-title"  th:text="${cid}">Card title</h5>
+                    
+                    
+                     <div class="form-group" th:classappend="${#fields.hasErrors('User_name')}? 'has-error':''">
+                        <label for="User_name" class="control-label">user name</label> 
+                        
+                        <input id="text" class="form-control" th:field="*{User_name}" />
+ 				<p class="error-message" th:each="error : ${#fields.errors('User_name')}" th:text="${error}">Validation error
+                        </p>
+                    </div>
+                    
+                    
+                    
+                    
+                     <div class="form-group" th:classappend="${#fields.hasErrors('section_name')}? 'has-error':''">
+                        <label for="section_name" class="control-label">section name</label> 
+                        
+                        <input id="text" class="form-control" th:field="*{section_name}" />
+ 				<p class="error-message" th:each="error : ${#fields.errors('section_name')}" th:text="${error}">Validation error
+                        </p>
+                    </div>
+                    
+                      <!--   <c:set var="uid"  value="{uid}" scope="request"></c:set>
+                      <c:set var="uid" value="{uid}" scope="request"></c:set>
+                     
+                      
+                      <div th:with="*{user_id}=${uid}" th:field="*{user_id}">
+                      <div th:with="${cid}=${cid}">
+        
+        		<c:set th:field="*{user_id}" th.value="*{user_id}"/>
+        		<c:set var="cid" value="${cid}"/> -->
+                    
+                     <div class="form-group" th:classappend="${#fields.hasErrors('description')}? 'has-error':''">
+                        <label for="description" class="control-label">description</label> 
+                        
+                        <input id="text" class="form-control" th:field="*{description}" />
+ 				<p class="error-message" th:each="error : ${#fields.errors('description')}" th:text="${error}">Validation error
+                        </p>
+                    </div>
+                      
+        		  	 <p>User name: <input type="text" th:field="*{user_id}" th.value="*{uid}" readonly/></p> 
+        			
+        			 <p>User name: <input type="text" th:field="*{course_id}" th.value="*{cid}" readonly/></p> 
+                    
+                    <h5></h5>  
+
+    
+        				<p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+        			<span sec:authentication="principal.username">User</span>
+                    
+					
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--  <div th:with="uid=${uid}">                 
+                      <div th:with="cid=${cid}"> -->
+
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+</body>
+</html>

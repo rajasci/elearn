@@ -1,0 +1,290 @@
+     <!--   <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+
+    <title>Registration</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+     <span class="sr-only">Toggle navigation</span> <span
+      class="icon-bar"></span> <span class="icon-bar"></span> <span
+      class="icon-bar"></span>
+    </button>
+                <a class="navbar-brand" href="#" th:href="@{/}">Registration and
+     Login Module</a>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h1>Login page</h1>
+                <form th:action="@{/trainer/login}" method="post">
+                    <div th:if="${param.error}">
+                        <div class="alert alert-danger">Invalid username or password.
+                        </div>
+                    </div>
+                    <div th:if="${param.logout}">
+                        <div class="alert alert-info">You have been logged out.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username</label>: <input type="text" id="username" name="username" class="form-control" autofocus="autofocus" placeholder="Username" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>: <input type="password" id="password" name="password" class="form-control" placeholder="Password" />
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3">
+                                <input type="submit" name="login-submit" id="login-submit" class="form-control btn btn-primary" value="Log In" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <span>New user? <a href="/" th:href="@{/trainer/registration}">Register
+        here</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+</body>
+</html>  
+
+
+
+
+
+
+
+
+<!--   <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+   <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="stylesheet" type="text/css" th:href="@{./css/login.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+    <title>login form</title>
+</head>
+<body>
+    <div class="uppercontainer">
+        <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" onclick="login()">Sign In</button>
+            <button type="button" class="toggle-btn" onclick="register()">Sign Up</button>
+        </div>
+        <div class="social-icons">
+            <img th:src="@{images/fb.png}">
+            <img src="./images/tw.png">
+            <img src="./images/gp.png">
+        </div>
+        <form id="login" class="input-group">
+            <input type="text" class="input-field" placeholder="User Id" required><br> <br>
+            <input type="password" class="input-field" placeholder="Enter Password" required>
+            <br><br>
+            <input type="checkbox" class="chech-box"><span>Remember Password</span>
+           
+            <button type="submit" class="submit-btn">Log in</button>
+        </form>
+        <form id="register" class="input-group">
+            <input type="text" class="input-field" placeholder="Enter Your Name" required>
+            <input type="text" class="input-field" placeholder="Create User Id" required>
+            <input type="date" class="input-field" placeholder="Course Start Date " required>
+            <input type="email" class="input-field" placeholder="Email Id" required>
+            <input type="password" class="input-field" placeholder="Enter Password" required>
+            <input type="checkbox" class="chech-box"><span>I agree to the terms & conditions</span>
+            <button type="submit" class="submit-btn">Register</button>
+        </form>
+    </div>
+            
+        </div>
+        
+        
+    <script>
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+    var z = document.getElementById("btn");
+    
+    function register(){
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+    }
+    function login(){
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0";
+    }
+    
+    
+    </script>
+        
+       
+          
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/custom.css}">
+	<link rel="stylesheet" th:href="@{/css/login.css}">
+    <title>login form</title>
+    
+    <style>
+    
+    </style>
+    
+</head>
+
+<body onload="myFunc()">
+    <div class="uppercontainer">
+        <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button"  class="toggle-btn" onclick="login()">Sign In</button>
+            
+            <button type="button" id= "myCheck" class="toggle-btn" onclick="register()">Sign Up</button>
+            
+        </div>
+        <div class="social-icons">
+            <img th:src="@{/images/fb.png}">
+            <img src="/images/tw.png">
+            <img src="/images/gp.png">
+        </div>
+        <form th:action="@{/admin/login}" id="login" class="input-group" method="post" >
+       
+       <div th:if="${param.error}">
+                        <div class="alert alert-danger">Invalid username or password.
+                        </div>
+                    </div>
+            <input type="text" class="input-field" placeholder="User Id" id="username" name="username"  required><br> <br>
+            <input type="password" class="input-field" placeholder="Enter Password"  id="password" name="password"  required>
+            <br><br>
+            <input type="checkbox" class="chech-box"><span>Remember Password</span>
+           <div th:if="${param.success}">
+                    <div class="alert alert-info">You've successfully registered to our awesome app!</div>
+                </div>
+            <button type="submit" class="submit-btn">Log in</button>
+        </form>
+        
+        <form th:action="@{/admin/registration}" id="register" class="input-group" th:object="${admin}" method="post">
+        
+             <p class="error-message" th:if="${#fields.hasGlobalErrors()}" th:each="error : ${#fields.errors('global')}" th:text="${error}">Validation error
+                    </p>
+        <div class="form-group" th:classappend="${#fields.hasErrors('email')}? 'has-error':''">
+         <p class="error-message" id="myBtn" th:each="error : ${#fields.errors('email')}" th:text="${error}">Validation error
+                        </p>
+                        </div>
+            <input type="text" class="input-field" th:field="*{firstName}" placeholder="Enter Your First Name" required>
+            <input type="text" class="input-field" th:field="*{lastName}"  placeholder="Enter Your Last Name" required>
+            <input type="email" class="input-field" placeholder="Email Id" th:field="*{email}" required>
+            <input type="password" class="input-field" placeholder="Enter Password" th:field="*{password}" required>
+            <input type="checkbox" class="chech-box"><span>I agree to the terms & conditions</span>
+            <button type="submit" class="submit-btn">Register</button>
+            
+        </form>
+        
+        <!-- 
+        <form th:action="@{/trainer/login}" id="login" class="input-group" method="post" >
+        
+        
+            <input type="text" class="input-field" placeholder="User Id" id="username" name="username"  required><br> <br>
+            <input type="password" class="input-field" placeholder="Enter Password"  id="password" name="password"  required>
+            <br><br>
+            <input type="checkbox" class="chech-box"><span>Remember Password</span>
+           
+            <button type="submit" class="submit-btn">Log in</button>
+        </form>
+        <form th:action="@{/trainer/r egistration}" id="register" class="input-group" th:object="${employee}" method="post">
+        
+            <input type="text" class="input-field" th:field="*{firstName}" placeholder="Enter Your First Name" required>
+            <input type="text" class="input-field" th:field="*{lastName}"  placeholder="Enter Your Last Name" required>
+            
+            <input type="date" class="input-field" placeholder="Course Start Date " required>
+            <input type="email" class="input-field" placeholder="Email Id" th:field="*{email}" required>
+            <input type="password" class="input-field" placeholder="Enter Password" th:field="*{password}" required>
+            <input type="checkbox" class="chech-box"><span>I agree to the terms & conditions</span>
+            <button type="submit" class="submit-btn">Register</button>
+        </form>
+         -->
+    </div>
+            
+        </div>
+      <script type="text/javascript">
+			document.getElementById("#signup").click();
+	</script>
+	<script>
+// On mouse-over, execute myFunction
+function myFunction() {
+  document.getElementById("myCheck").click(); // Click on the checkbox
+}
+
+function myFunc() {
+    var x = document.getElementById("myBtn").textContent;
+    if(x!="")
+  	  myFunction();
+   }
+</script>
+    <script>
+    
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+    var z = document.getElementById("btn");
+    
+    
+    function register(){
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+    }
+    function login(){
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0";
+    }
+    
+    
+    </script>
+    <script>
+     function myFunc() {
+      var x = document.getElementById("myBtn").textContent;
+      if(x!="")
+    	  myFunction();
+      
+     }
+      
+	</script>  
+          
+        
+       
+          
+</body>
+</html>
