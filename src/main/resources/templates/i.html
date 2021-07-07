@@ -1,30 +1,90 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
      <!-- Font Awesome -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+       <link rel="stylesheet" href="fonts_footer/icomoon/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="index/css_footer/bootstrap.min.css">
     
-     <!-- custom stylesheet -->
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="index/css_footer/style.css">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Math&family=Staatliches&display=swap');
+
+        .logo img{
+	width: 170px;
+	cursor: pointer;
+	transition: all 1s;
+}
+</style>
+
+
+
+    
+    <title>Learn More</title>
+
+
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href="index/css/css1/multislider.css" rel="stylesheet">
+<link href="index/css/css1/slider_item.css" rel="stylesheet">
+<link href="index/css/css1/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="css/login.css">
+ <link rel="stylesheet" href="css/custom.css">
+     <link rel="stylesheet" href="index/css/login.css">
+     <link rel="stylesheet" href="index/css/custom.css">
+  </head>
+<body class="bg-light">
+ 
+ 
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+
+  <button class="navbar-toggler navbar-toggler-icon" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
+    
+
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
      
-     <link rel="stylesheet" th:href="@{index/css/custom.css}">
-     <link rel="stylesheet" th:href="@{index/css/login.css}">
+    </ul>
+  </div>
+</nav> -->
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+
+  <button class="navbar-toggler navbar-toggler-icon" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
     
 
-    <title>Registration</title>
-</head>
-<body>
-    
- 	<nav class="navbar navbar-expand-lg navbar-light bg-white">
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  </button>
+     <div class="logo"><img src="learnit_logo.png" alt="logo"></div>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto container-fluid">
 
                 <li class="nav-item dropdown">
@@ -40,37 +100,148 @@
                     </div>
                 </li>
 
-                <li class="nav-item col-8">
+                <li class="nav-item" style="align-content: center;">
+                    <div class="text-center" >
+                     <li class="nav-item col-8">
                     <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control form-control-lg col-9 bg-light border-0 rounded-radius-left" type="search" placeholder="Search for Courses" aria-label="Search">
-                        <button class="btn btn-lg btn-light col-2 my-2 my-sm-0 ml-0 rounded-radius-right" type="submit"><i class="fa fa-search"></i></button>
+                        <input class="form-control form-control-lg col-9 bg-light border-0 rounded-radius-left " type="search" placeholder="Search for Courses" aria-label="Search">
+                        <button class="btn btn-lg btn-light col-2 my-2 my-sm-0 ml-0 rounded-radius-right" type="submit"><i class="fa fa-search" ></i></button>
                     </form>
                 </li>
+                </div>
+                </li>
             </ul>
+            <ul class="navbar-nav">
 
-            <a class="btn btn-light mx-2" href="login2.html" data-toggle="popover" data-trigger="focus" data-content="Get your team access to LearnIt's top 2,500 courses anytime, anywhere" title="Try LearnIt for Business" data-placement="bottom" >LearnIt for Business</a>
-            <a class="btn btn-light mx-2" href="trainer/login">Become an Instructor</a>
-            <a class="btn btn-light mx-2 rounded-circle" href="#"><i class="fa fa-shopping-cart"></i></a>
-            <!-- <a class="btn btn-success mx-1" href="#">Login</a> -->
-            <a class="btn btn-danger mx-1" href="/employee/login">Sign In/Up</a>
+
+<li class="nav-item " style="padding: 10px">
+    <div class="text-center" >
+            <a class="btn btn-light mx-2" th:href="login2.html" data-toggle="popover" data-trigger="focus" data-content="Get your team access to LearnIt's top 2,500 courses anytime, anywhere" title="Try LearnIt for Business" data-placement="bottom" href="#">LearnIt for Business</a>
+        </div>
+        </li>
+
+        <li class="nav-item" style="padding: 10px">
+            <div class="text-center" >
+            <a class="btn btn-light mx-2" href="become_an_instructor.html">Become an Instructor</a>
+        </div>
+            </li>
+
+            <li class="nav-item" style="padding: 10px"> 
+
+<a>
+    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+          <div  role="document">
+
+        <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button"  class="toggle-btn" onclick="login()">Sign In</button>
             
+            <button type="button" id= "myCheck" class="toggle-btn" onclick="register()">Sign Up</button>
+            
+        </div>
+        <div class="social-icons">
+            <img th:src="@{/images/fb.png}">
+            <img src="/images/tw.png">
+            <img src="/images/gp.png">
+        </div>
+        <form th:action="@{/trainer/login}" id="login" class="input-group" method="post" >
+        <div th:if="${param.error}">
+                        <div class="alert alert-danger">Invalid username or password.
+                        </div>
+                    </div>
+       
+            <input type="text" class="input-field" placeholder="User Id" id="username" name="username"  required><br> <br>
+            <input type="password" class="input-field" placeholder="Enter Password"  id="password" name="password"  required>
+            <br><br>
+            <input type="checkbox" class="chech-box"><span>Remember Password</span>
+           <div th:if="${param.success}">
+                    <div class="alert alert-info">You've successfully registered to our awesome app!</div>
+                </div>
+            <button type="submit" class="submit-btn">Log in</button>
+        </form>
+        
+        <form th:action="@{/trainer/registration}" id="register" class="input-group" th:object="${employee}" method="post">
+        
+             <p class="error-message" th:if="${#fields.hasGlobalErrors()}" th:each="error : ${#fields.errors('global')}" th:text="${error}">Validation error
+                    </p>
+        <div class="form-group" th:classappend="${#fields.hasErrors('email')}? 'has-error':''">
+         <p class="error-message" id="myBtn" th:each="error : ${#fields.errors('email')}" th:text="${error}">Validation error
+                        </p>
+                        </div>
+            <input type="text" class="input-field" th:field="*{firstName}" placeholder="Enter Your First Name" required>
+            <input type="text" class="input-field" th:field="*{lastName}"  placeholder="Enter Your Last Name" required>
+            <input type="email" class="input-field" placeholder="Email Id" th:field="*{email}" required>
+            <input type="password" class="input-field" placeholder="Enter Password" th:field="*{password}" required>
+            <input type="checkbox" class="chech-box"><span>I agree to the terms & conditions</span>
+            <button type="submit" class="submit-btn">Register</button>
+            
+        </form>
+        
 
-           
+    </div>
+        </div> 
+   <!-- <div class="modal-dialog" role="document">
+
+          <div class="modal-content">
+
+
+             <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Sign In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Sign Up</button>
+                </div>  
+            </div>
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+             </div>
+
+              <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+                    <i class="fas fa-envelope prefix grey-text"></i>
+                    <input type="email" id="defaultForm-email" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+                </div>
+
+                <div class="md-form mb-4">
+                    <i class="fas fa-lock prefix grey-text"></i>
+                    <input type="password" id="defaultForm-pass" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+                </div>
+               </div>
+               <div class="modal-footer d-flex justify-content-center">
+                    <button class="btn btn-default">Login</button>
+                </div>
+            </div>
+
+  </div> -->
+</div> 
+<div class="text-center" >
+    <a class="btn btn-danger mx-1" data-toggle="modal" data-target="#modalLoginForm" style="color:#fff;">Sign In/Up</a>
+</div>
+</a>
+</li>
+</ul>
+            <!-- <a class="btn btn-danger mx-1" href="login.html">Sign In/Up</a>-->
         </div>
     </nav>
 
-    <!-- Body starts here -->
     <div class="jumbotron mb-0 bg-banner" style="height:500px; padding-top:150px">
         <div class="container">
             <div class="row align-items-end">
                 <div class="col">
-                    <div class="col-md-4 text-light">
-                        <h1 class="display-5">Hot Sale - $9.99 courses</h1>
-                        <p class="lead">Get our best deal on courses!</p>
+                    <div class="col-md-4 text-light" style="font-family: 'Staatliches', cursive; ">
+                        <h1 class="display-5" style="color: #dc3545;">Hot Sale - $9.99 courses</h1>
+                        <p class="lead" style="color: #ff9933;">Get our best deal on courses!</p>
                     </div>
                     <div class="col-md-6">  
                         <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control form-control-lg col-9 border-right-0 rounded-radius-left" type="search" placeholder="what do you want to learn!" aria-label="Search">
+                            <input class="form-control form-control-lg col-9 border-right-0 rounded-radius-left" type="search" placeholder="What do you want to learn.!" aria-label="Search">
                             <button class="btn btn-lg btn-danger border-left-0 rounded-radius-right col-2 my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
                         </form>
                     </div>
@@ -113,370 +284,229 @@
         </div>
     </div>
 
-    <div class="container mt-5">
-        <h3><small class="text-muted">Top Courses for "Business"</small></h3>
-        <div class="card-deck">
-            <div class="card mx-1">
-                <span class="badge badge-info w-50 badge-style rounded-radius-right">BEST SELLER</span>
-                <img class="card-img-top" src="images/bg1.jpg" alt="image">
-                <div class="card-body px-2">
-                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
-                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
-                    <p class="card-text"><small class="text-muted">
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star-half text-warning"></i>
-                        4.5 (18,560)</small>
-                        <span class="d-block"></span>
-                        <span class="float-right">
-                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
-                            <small><strong>$9.99</strong></small>
-                        </span> 
-                    </p>
-                </div>
-            </div>
+<!--slider items-1-->
+    <div class="container">
+        <br>
+        <br>
+<h2 style="color: #dc3545;">Top Courses for MBA</h2><hr>
 
-            <div class="card mx-1">
-                <span class="badge badge-info w-50 badge-style rounded-radius-right">BEST SELLER</span>
-                <img class="card-img-top" src="images/bg3.jpg" alt="image">
-                <div class="card-body px-2">
-                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
-                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
-                    <p class="card-text"><small class="text-muted">
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star-half text-warning"></i>
-                        4.5 (18,560)</small>
-                        <span class="d-block"></span>
-                        <span class="float-right">
-                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
-                            <small><strong>$9.99</strong></small>
-                        </span> 
-                    </p>
-                </div>
-            </div>
+                  <div id="blogSlider">
+                    <div class="MS-content">
+                         <div class="item">
+                             <div class="product-grid">
+                                 <div class="product-image">
+                                     <a href="#">
+                                         <img class="pic-1" src="index/product/1.jpg">
+                                     </a>
+                                     <ul class="social">
+                                         <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                     </ul>
+                                     <span class="product-new-label">Sale</span>
+                                 </div>
+                                 <ul class="rating">
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                 </ul>
+                                 <div class="product-content">
+                                     <h3 class="title"><a href="#">Gold Jewellery</a></h3>
+                                     <div class="price">
+                                         Rs.3999
+                                     </div>
+                                     <a class="add-to-cart" href="">+ Add To Cart</a>
+                                 </div>
+                             </div>
+                         </div>
 
-            <div class="card mx-1">
-                <span class="badge badge-warning w-50 badge-style rounded-radius-right">TOP RATED</span>
-                <img class="card-img-top" src="images/bg2.jpg" alt="image">
-                <div class="card-body px-2">
-                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
-                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
-                    <p class="card-text"><small class="text-muted">
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star-half text-warning"></i>
-                        4.5 (18,560)</small>
-                        <span class="d-block"></span>
-                        <span class="float-right">
-                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
-                            <small><strong>$9.99</strong></small>
-                        </span> 
-                    </p>
-                </div>
-            </div>
+                         <div class="item">
+                             <div class="product-grid">
+                                 <div class="product-image">
+                                     <a href="#">
+                                         <img class="pic-1" src="index/product/2.jpg">
+                                     </a>
+                                     <ul class="social">
+                                         <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                     </ul>
+                                     <span class="product-new-label">Sale</span>
+                                     
+                                 </div>
+                                 <ul class="rating">
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                 </ul>
+                                 <div class="product-content">
+                                     <h3 class="title"><a href="#">Gold Jewellery</a></h3>
+                                     <div class="price">
+                                         Rs.3999
+                                     </div>
+                                     <a class="add-to-cart" href="">+ Add To Cart</a>
+                                 </div>
+                             </div>
+                         </div>
 
-            <div class="card mx-1">
-                <img class="card-img-top" src="images/bg1.jpg" alt="image">
-                <div class="card-body px-2">
-                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
-                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
-                    <p class="card-text"><small class="text-muted">
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star-half text-warning"></i>
-                        4.5 (18,560)</small>
-                        <span class="d-block"></span>
-                        <span class="float-right">
-                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
-                            <small><strong>$9.99</strong></small>
-                        </span> 
-                    </p>
-                </div>
-            </div>
 
-            <div class="card mx-1">
-                <img class="card-img-top" src="images/bg3.jpg" alt="image">
-                <div class="card-body px-2">
-                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
-                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
-                    <p class="card-text"><small class="text-muted">
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star-half text-warning"></i>
-                        4.5 (18,560)</small>
-                        <span class="d-block"></span>
-                        <span class="float-right">
-                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
-                            <small><strong>$9.99</strong></small>
-                        </span> 
-                    </p>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-    
-    <div class="container mt-5">
-        <h3><small class="text-muted">Top Courses for "Development"</small></h3>
-        <div class="card-deck">
-            <div class="card mx-1">
-                <span class="badge badge-info w-50 badge-style rounded-radius-right">BEST SELLER</span>
-                <img class="card-img-top" src="images/bg1.jpg" alt="image">
-                <div class="card-body px-2">
-                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
-                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
-                    <p class="card-text"><small class="text-muted">
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star-half text-warning"></i>
-                        4.5 (18,560)</small>
-                        <span class="d-block"></span>
-                        <span class="float-right">
-                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
-                            <small><strong>$9.99</strong></small>
-                        </span> 
-                    </p>
-                </div>
-            </div>
+                         <div class="item">
+                             <div class="product-grid">
+                                 <div class="product-image">
+                                     <a href="#">
+                                         <img class="pic-1" src="index/product/3.jpg">
+                                     </a>
+                                     <ul class="social">
+                                         <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                     </ul>
+                                     <span class="product-new-label">Sale</span>
+                                 </div>
+                                 <ul class="rating">
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                 </ul>
+                                 <div class="product-content">
+                                     <h3 class="title"><a href="#">Gold Jewellery</a></h3>
+                                     <div class="price">
+                                         Rs.3999
+                                     </div>
+                                     <a class="add-to-cart" href="">+ Add To Cart</a>
+                                 </div>
+                             </div>
+                         </div>
 
-            <div class="card mx-1">
-                <span class="badge badge-info w-50 badge-style rounded-radius-right">BEST SELLER</span>
-                <img class="card-img-top" src="images/bg3.jpg" alt="image">
-                <div class="card-body px-2">
-                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
-                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
-                    <p class="card-text"><small class="text-muted">
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star-half text-warning"></i>
-                        4.5 (18,560)</small>
-                        <span class="d-block"></span>
-                        <span class="float-right">
-                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
-                            <small><strong>$9.99</strong></small>
-                        </span> 
-                    </p>
-                </div>
-            </div>
 
-            <div class="card mx-1">
-                <span class="badge badge-warning w-50 badge-style rounded-radius-right">TOP RATED</span>
-                <img class="card-img-top" src="images/bg2.jpg" alt="image">
-                <div class="card-body px-2">
-                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
-                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
-                    <p class="card-text"><small class="text-muted">
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star-half text-warning"></i>
-                        4.5 (18,560)</small>
-                        <span class="d-block"></span>
-                        <span class="float-right">
-                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
-                            <small><strong>$9.99</strong></small>
-                        </span> 
-                    </p>
-                </div>
-            </div>
+                         <div class="item">
+                             <div class="product-grid">
+                                 <div class="product-image">
+                                     <a href="#">
+                                         <img class="pic-1" src="index/product/4.jpg">
+                                     </a>
+                                     <ul class="social">
+                                         <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                     </ul>
+                                 </div>
+                                 <ul class="rating">
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                 </ul>
+                                 <div class="product-content">
+                                     <h3 class="title"><a href="#">Gold Jewellery</a></h3>
+                                     <div class="price">
+                                         Rs.3999
+                                     </div>
+                                     <a class="add-to-cart" href="">+ Add To Cart</a>
+                                 </div>
+                             </div>
+                         </div>
 
-            <div class="card mx-1">
-                <img class="card-img-top" src="images/bg1.jpg" alt="image">
-                <div class="card-body px-2">
-                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
-                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
-                    <p class="card-text"><small class="text-muted">
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star-half text-warning"></i>
-                        4.5 (18,560)</small>
-                        <span class="d-block"></span>
-                        <span class="float-right">
-                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
-                            <small><strong>$9.99</strong></small>
-                        </span> 
-                    </p>
-                </div>
-            </div>
 
-            <div class="card mx-1">
-                <img class="card-img-top" src="images/bg3.jpg" alt="image">
-                <div class="card-body px-2">
-                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
-                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
-                    <p class="card-text"><small class="text-muted">
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star-half text-warning"></i>
-                        4.5 (18,560)</small>
-                        <span class="d-block"></span>
-                        <span class="float-right">
-                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
-                            <small><strong>$9.99</strong></small>
-                        </span> 
-                    </p>
-                </div>
-            </div>
-            
-        </div>
-    </div>
+                         <div class="item">
+                             <div class="product-grid">
+                                 <div class="product-image">
+                                     <a href="#">
+                                         <img class="pic-1" src="index/product/5.jpg">
+                                     </a>
+                                     <ul class="social">
+                                         <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                     </ul>
+                                 </div>
+                                 <ul class="rating">
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                 </ul>
+                                 <div class="product-content">
+                                     <h3 class="title"><a href="#">Gold Jewellery</a></h3>
+                                     <div class="price">
+                                         Rs.3999
+                                     </div>
+                                     <a class="add-to-cart" href="">+ Add To Cart</a>
+                                 </div>
+                             </div>
+                         </div>
+                         
+                         
+                         <div class="item">
+                             <div class="product-grid">
+                                 <div class="product-image">
+                                     <a href="#">
+                                         <img class="pic-1" src="index/product/6.jpg">
+                                     </a>
+                                     <ul class="social">
+                                         <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                     </ul>
+                                 </div>
+                                 <ul class="rating">
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                 </ul>
+                                 <div class="product-content">
+                                     <h3 class="title"><a href="#">Gold Jewellery</a></h3>
+                                     <div class="price">
+                                         Rs.3999
+                                     </div>
+                                     <a class="add-to-cart" href="">+ Add To Cart</a>
+                                 </div>
+                             </div>
+                         </div>
 
-    <div class="container mt-5">
-        <h3><small class="text-muted">Top Courses for "Design"</small></h3>
-        <div class="card-deck">
-            <div class="card mx-1">
-                <span class="badge badge-info w-50 badge-style rounded-radius-right">BEST SELLING</span>
-                <img class="card-img-top" src="images/bg1.jpg" alt="image">
-                <div class="card-body px-2">
-                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
-                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
-                    <p class="card-text"><small class="text-muted">
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star-half text-warning"></i>
-                        4.5 (18,560)</small>
-                        <span class="d-block"></span>
-                        <span class="float-right">
-                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
-                            <small><strong>$9.99</strong></small>
-                        </span> 
-                    </p>
-                </div>
-            </div>
-             <div class="card mx-1">
-                <span class="badge badge-info w-50 badge-style rounded-radius-right">BEST SELLING</span>
-                <img class="card-img-top" src="images/bg1.jpg" alt="image">
-                <div class="card-body px-2">
-                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
-                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
-                    <p class="card-text"><small class="text-muted">
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star-half text-warning"></i>
-                        4.5 (18,560)</small>
-                        <span class="d-block"></span>
-                        <span class="float-right">
-                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
-                            <small><strong>$9.99</strong></small>
-                        </span> 
-                    </p>
-                </div>
-            </div>
 
-            <div class="card mx-1">
-                <span class="badge badge-info w-50 badge-style rounded-radius-right">BEST SELLING</span>
-                <img class="card-img-top" src="images/bg3.jpg" alt="image">
-                <div class="card-body px-2">
-                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
-                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
-                    <p class="card-text"><small class="text-muted">
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star-half text-warning"></i>
-                        4.5 (18,560)</small>
-                        <span class="d-block"></span>
-                        <span class="float-right">
-                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
-                            <small><strong>$9.99</strong></small>
-                        </span> 
-                    </p>
-                </div>
-            </div>
 
-            <div class="card mx-1">
-                <span class="badge badge-warning w-50 badge-style rounded-radius-right">TOP RATED</span>
-                <img class="card-img-top" src="images/bg2.jpg" alt="image">
-                <div class="card-body px-2">
-                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
-                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
-                    <p class="card-text"><small class="text-muted">
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star-half text-warning"></i>
-                        4.5 (18,560)</small>
-                        <span class="d-block"></span>
-                        <span class="float-right">
-                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
-                            <small><strong>$9.99</strong></small>
-                        </span> 
-                    </p>
-                </div>
-            </div>
+                         <div class="item">
+                             <div class="product-grid">
+                                 <div class="product-image">
+                                     <a href="#">
+                                         <img class="pic-1" src="index/product/7.jpg">
+                                     </a>
+                                     <ul class="social">
+                                         <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                     </ul>
+                                 </div>
+                                 <ul class="rating">
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                     <li class="fa fa-star"></li>
+                                 </ul>
+                                 <div class="product-content">
+                                     <h3 class="title"><a href="#">Gold Jewellery</a></h3>
+                                     <div class="price">
+                                         Rs.3999
+                                     </div>
+                                     <a class="add-to-cart" href="">+ Add To Cart</a>
+                                 </div>
+                             </div>
+                         </div>
 
-            <div class="card mx-1">
-                <img class="card-img-top" src="images/bg1.jpg" alt="image">
-                <div class="card-body px-2">
-                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
-                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
-                    <p class="card-text"><small class="text-muted">
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star-half text-warning"></i>
-                        4.5 (18,560)</small>
-                        <span class="d-block"></span>
-                        <span class="float-right">
-                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
-                            <small><strong>$9.99</strong></small>
-                        </span> 
-                    </p>
-                </div>
-            </div>
+                     </div>
+                         <div class="MS-controls">
+                             <button class="MS-left"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+                             <button class="MS-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                         </div>
+                     </div>
+                     
+                     </div>
+<!--slider item-->
 
-            <div class="card mx-1">
-                <img class="card-img-top" src="images/bg3.jpg" alt="image">
-                <div class="card-body px-2">
-                    <h6 class="card-title">An Entire MBA in 1 course. Award Winning...</h6>
-                    <p class="card-text" style="font-size:11px">Chris Haroun. Complete Business...</p>
-                    <p class="card-text"><small class="text-muted">
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star text-warning"></i>
-                        <i class="fa fa-star-half text-warning"></i>
-                        4.5 (18,560)</small>
-                        <span class="d-block"></span>
-                        <span class="float-right">
-                            <span class="text-muted" style="text-decoration:line-through">$199.99</span>
-                            <small><strong>$9.99</strong></small>
-                        </span> 
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+
+
+
 
     
-    <div class="container mt-5">
+<!--    <div class="container mt-5">
         <h3><small class="text-muted">Discover Our Popular Courses</small></h3>
         <div class="row">
             <div class="col-sm-4">
@@ -490,8 +520,8 @@
             </div>
         </div>
     </div>
-
-    <div class="container mt-5">
+-->
+   <!-- <div class="container mt-5">
         <h3><small class="text-muted">Achieve Your Goals</small></h3>
         <div class="row">
             <div class="col-md-4">
@@ -518,10 +548,10 @@
                     </figure>
                 </a>
             </div>
-        </div>
+        </div> -->
 
         <!-- second row starts here -->
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-3">
                 <a href="#">
                     <figure class="figure">
@@ -555,128 +585,76 @@
                 </a>
             </div>
         </div>
-    </div>
-
-    <div class="container mt-5">
-        <h3><small class="text-muted">Featured Topics</small></h3>
-        <div class="row">
-            <a href="#" class="btn btn-light shadow">Photography</a>
-            <a href="#" class="btn btn-light shadow mx-1">Digital Marketing</a>
-            <a href="#" class="btn btn-light shadow mx-1">Project Management</a>
-            <a href="#" class="btn btn-light shadow mx-1">Graphic Design</a>
-            <a href="#" class="btn btn-light shadow mx-1">Web Design</a>
-            <a href="#" class="btn btn-light shadow mx-1">Data Science</a>
-            <a href="#" class="btn btn-light shadow mx-1">Python</a>
-            <a href="#" class="btn btn-light shadow mx-1">SQL</a>
-            <a href="#" class="btn btn-light shadow mx-1">Piano</a>
-        </div>
-    </div>
-
-    <div class="container" style="margin-top:120px;">
-        <div class="row">
-            <div class="col text-center border-right">
-                <div class="col-8 offset-2">
-                    <h4>Become an Instructor</h4>
-                    <p class="lead" style="font-size:15px;">Teach what you love! LearnIt gives you the tools to create an online course.</p>
-                    <a href="#" class="btn btn-danger btn-lg">Start Teaching</a>
-                </div>
+    </div> -->
+<footer class="footer-14398">
+      
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-3">
+               <div class="logo"><img src="learnit_logo.png" alt="logo"></div>
             </div>
-            <div class="col text-center">
-                <div class="col-8 offset-2">
-                    <a href="login2.html"> <h4>LearnIt for Business</h4></a>
-                    <p class="lead" style="font-size:15px;">Get unlimited access to 2,500 of LearnIt's top courses for your team.</p>
-                    <a href="login2.html" class="btn btn-danger btn-lg">Get LearnIt for Business</a>
-                </div>
+            <div class="col-md-2 ml-auto">
+              <h3>Business</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Learnit for Business</a></li>
+                <li><a href="#">Teach on Learnit</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Affliate</a></li>
+                <li><a href="#">Online retail</a></li>
+              </ul>
             </div>
-        </div>
-    </div>
+            <div class="col-md-2 ml-auto">
+              <h3>Press</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Events</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Awards</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Online retail</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 ml-auto">
+              <h3>About</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Contacts</a></li>
+              </ul>
+            </div>
+          </div>
 
-    <div class="row mt-5 border-top px-5 pt-5" style="font-size:13px;">
-        <div class="col">
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a href="login2.html" class="nav-link text-info"><strong>LearnIt for Business</strong></a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-info"><strong>Become an Instructor</strong></a>
-                </li> 
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-info">Mobile Apps</a>
-                </li>
-            </ul>
-        </div>
-        <div class="col">
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-info">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-info">Careers</a>
-                </li> 
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-info">Blog</a>
-                </li>
-            </ul>
-        </div>
-        <div class="col">
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-info">Topics</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-info">Support</a>
-                </li> 
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-info">Affiliate</a>
-                </li>
-            </ul>
-        </div>
+          <div class="row mb-4">
+            <div class="col-12 pb-4">
+              <div class="line"></div>
+            </div>
+            <div class="col-md-6 text-md-left">
+              <ul class="list-unstyled link-menu nav-left">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Code of Conduct</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6 text-md-right">
+              <ul class="list-unstyled social nav-right">
+                <li><a href="#"><span class="icon-twitter"></span></a></li>
+                <li><a href="#"><span class="icon-instagram"></span></a></li>
+                <li><a href="#"><span class="icon-facebook"></span></a></li>
+                <li><a href="#"><span class="icon-pinterest"></span></a></li>
+              </ul>
+            </div>
+          </div>
 
-        <div class="col">
-            <form>
-                <div class="form-group col-7 float-right">
-                    <select class="form-control">
-                        <option><i class="fa fa-bin"></i> English</option>
-                        <option>Yoruba</option>
-                        <option>Igbo</option>
-                        <option>Hausa</option>
-                        <option>Efik</option>
-                        <option>Tiv</option>
-                    </select> 
-                </div>
-            </form>
         </div>
-    </div>
+      </footer>
+      
 
-    <div>
-        <nav class="nav mt-5 ml-5" style="font-size:12px;">
-            <span class="nav-link text-muted font-weight-bold">Local Home Pages:</span>
-            <span class="nav-link text-muted">English</span>
-            <a href="#" class="text-info nav-link">Deutsch</a>
-            <a href="#" class="text-info nav-link">Espanyol</a>
-            <a href="#" class="text-info nav-link">Francais</a>
-            <a href="#" class="text-info nav-link">Portuguese</a>
-            <a href="#" class="text-info nav-link">æ—¥æœ¬èªž</a>
-        </nav>
-        <hr>
-    </div>
-
-    <div class="row" style="font-size:13px">
-        <div class="col">
-            <ul class="nav justify-content-end">
-                <li class="nav-item">
-                    <a class="nav-link text-info" href="#">Terms</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-info" href="#">Privacy Policy and Cookie Policy</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-info" href="#">Intellectual Property</a>
-                </li> 
-            </ul>
-        </div>
-    </div>
-
+    
+    
+    <script src="js_footer/jquery-3.3.1.min.js"></script>
+    <script src="js_footer/popper.min.js"></script>
+    <script src="js_footer/bootstrap.min.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -689,6 +667,53 @@
             $('[data-toggle="popover"]').popover();
         });
     </script>
+   
     <script src="main.js"></script>
+
+
+
+
+
+
+ <script src="index/js/js1/bootstrap.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="index/js/js1/multislider.min.js"></script>
+   <script src="index/js/js1/custom.js"></script>
+   
+    
+
+
+  <script>
+   
+$('#blogSlider').multislider({
+        duration: 750,
+            interval: 3000
+    });
+       
+//    </script>
+
+
+ <script>
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+    var z = document.getElementById("btn");
+    
+    function register(){
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "120px";
+    }
+    function login(){
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0";
+    }
+    
+    
+    </script>
+
+
+
+
 </body>
 </html>

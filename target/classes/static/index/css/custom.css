@@ -1,18 +1,22 @@
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
 .bg-banner {
-    background-image: url(../images/bg2.jpg);
-    background-size: 100%;
+    background-image: url(../images/bg21.jpg);
+    background-size: fill;
     border-radius: 0%;
     /* background-repeat: no-repeat; */
 }
 
 .color-grad {
-    background: linear-gradient(to left, #ec5252, #6e1a52);
+     background: linear-gradient(to bottom, #dc3545 50%, #ff9933 100%);
 }
 
-.badge-style {
+.card-deck .badge {
     position: absolute;
     z-index: 0;
-    margin-top: 10px;
 }
 
 .rounded-radius-right {
@@ -30,3 +34,4 @@
 
 
 /* login forms ends  here  */
+

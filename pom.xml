@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>net.guides.springboot</groupId>
-	<artifactId>registration-login-springboot-security-thymeleaf</artifactId>
+	<artifactId>elearing</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>registration-login-springboot-security-thymeleaf</name>
+	<name>elearing</name>
 	<description>e-learning</description>
 	<properties>
 		<java.version>11</java.version>
@@ -41,7 +41,7 @@
 		<dependency>
     <groupId>javax.validation</groupId>
     <artifactId>validation-api</artifactId>
-    <version>2.0.1.Final</version>
+    
 	</dependency>
 		
 		<dependency>
@@ -93,7 +93,7 @@
 		<dependency>
     <groupId>javax.xml.bind</groupId>
     <artifactId>jaxb-api</artifactId>
-    <version>2.3.0</version>
+ 
 </dependency>
 <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
 <dependency>
