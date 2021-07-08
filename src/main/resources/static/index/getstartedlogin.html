@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login SignUp</title>
+  <link rel="stylesheet" type="text/css" href="loginStyle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     
+  <!-- It will redirect to the Home Page after submitting the form -->
+  <script>
+  $(document).ready(function(){
+    $("form").submit(function(){
+      alert("Great Job !");
+    });
+  });
+  </script>
+</head>
+<body>
+  <style>
+    body {
+        background-image: url('images/elearning5.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+        background-size:1518px 665px;
+      }
+     </style>
+    <div class="form-box">
+      
+      
+      
+      <!-- Login Form -->
+      <form id="login" class="input-group" action="courses.html">
+        <div class="inp">
+          <input type="text" id="fname" class="input-field" placeholder="First Name" style="width: 88%; border:none;" required="required">
+        </div>
+        <div class="inp">
+          <input type="text" id="lname" class="input-field" placeholder="Last Name" style="width: 88%; border: none;" required="required">
+        </div>
+        <div class="inp">
+          <input type="text" id="email" class="input-field" placeholder="Work Email" style="width: 88%; border: none;" >
+        </div>
+        <div class="inp">
+          <input type="text" id="phonenumber" class="input-field" placeholder="Phone Number" style="width: 88%; border: none;" >
+        </div>
+        <div class="inp">
+          <input type="text" id="password" class="input-field" placeholder="password" style="width: 88%; border:none;" >
+        </div>
+        
+        <input type="checkbox" class="check-box" id="chkAgree" onclick="goFurther()">I agree to the Terms & Conditions
+
+        <button type="submit" id="btnSubmit" class="submit-btn reg-btn">Register</button></a>
+          
+                    
+                    
+               
+              
+        
+      </form>
+      
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

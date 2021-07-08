@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
+<
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -38,14 +38,15 @@
                 </div>
 
                 <h1>Registration</h1>
-                <form th:action="@{/trainer/register}" th:object="${newcourse}" method="post">
+                
+                <form th:action="@{/trainer/register}" enctype="multipart/form-data" th:object="${newcourse}" method="post">
 
                     
                     <div class="form-group" th:classappend="${#fields.hasErrors('Course_name')}? 'has-error':''">
                         <label for="Course_name" class="control-label">Course name</label> 
                         
                         <input id="text" class="form-control" th:field="*{Course_name}" />
- 				<p class="error-message" th:each="error : ${#fields.errors('Course_name')}" th:text="${error}">Validation error
+                <p class="error-message" th:each="error : ${#fields.errors('Course_name')}" th:text="${error}">Validation error
                         </p>
                     </div>
                     
@@ -53,7 +54,7 @@
                         <label for="Category" class="control-label">Category</label> 
                         
                         <input id="text" class="form-control" th:field="*{Category}" />
- 				<p class="error-message" th:each="error : ${#fields.errors('Category')}" th:text="${error}">Validation error
+                <p class="error-message" th:each="error : ${#fields.errors('Category')}" th:text="${error}">Validation error
                         </p>
                     </div>
                     
@@ -62,19 +63,24 @@
                         <label for="description" class="control-label">description</label> 
                         
                         <input id="text" class="form-control" th:field="*{description}" />
- 				<p class="error-message" th:each="error : ${#fields.errors('description')}" th:text="${error}">Validation error
+                <p class="error-message" th:each="error : ${#fields.errors('description')}" th:text="${error}">Validation error
                         </p>
                     </div>
                     
                     
                       <div class="form-group" th:classappend="${#fields.hasErrors('User_name')}? 'has-error':''">
                         <label for="User_name" class="control-label">User_name</label> 
-                        
                         <input id="text" class="form-control" th:field="*{User_name}" />
- 				<p class="error-message" th:each="error : ${#fields.errors('User_name')}" th:text="${error}">Validation error
+                <p class="error-message" th:each="error : ${#fields.errors('User_name')}" th:text="${error}">Validation error
                         </p>
                     </div>
                     
+                    <div class="form-group" th:classappend="${#fields.hasErrors('image')}? 'has-error':''">
+                        <label for="vedio" class="control-label">vedio</label> 
+                        <input type="file"  name= "file" class="form-control"/>
+                        <p class="error-message" th:each="error : ${#fields.errors('image')}" th:text="${error}">Validation error
+                        </p>
+                    </div> 
                     
        
         
@@ -92,4 +98,80 @@
     <script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
     <script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
 </body>
+
+ <!-- 
+ <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+
+    <title>Registration</title>
+</head>
+-->
+
+<!-- 
+ <head>
+  <title>Addcouseform</title>
+  <link rel="stylesheet" type="text/css" href="../index/loginStyle.css">
+  
+</head>
+<body>
+<div class="form-box">
+      
+      
+      
+      
+      
+      <form id="login" class="input-group" th:action="@{/trainer/register}" th:object="${newcourse}" method="post" >
+      <div class="form-group" th:classappend="${#fields.hasErrors('Course_name')}? 'has-error':''">
+     <div class="inp">
+          <input type="text" id="coursename" class="input-field" placeholder="Course Name" style="width: 88%; border:none;" required="required">
+        </div>
+   <p class="error-message" th:each="error : ${#fields.errors('Course_name')}" th:text="${error}">Validation error</p>
+        </div>
+        
+        <div class="form-group" th:classappend="${#fields.hasErrors('Category')}? 'has-error':''">
+        <div class="inp">
+          <input type="text" id="category" class="input-field" placeholder="Category" style="width: 88%; border: none;" required="required">
+        </div>
+        <p class="error-message" th:each="error : ${#fields.errors('Category')}" th:text="${error}">Validation error
+          </p>
+        </div>
+        
+         <div class="form-group" th:classappend="${#fields.hasErrors('User_name')}? 'has-error':''">
+        <div class="inp">
+          <input type="text" id="Username" class="input-field" placeholder="Username" style="width: 88%; border: none;" >
+        </div>
+        <p class="error-message" th:each="error : ${#fields.errors('User_name')}" th:text="${error}">Validation error
+                        </p>
+        </div>
+        
+          <div class="form-group" th:classappend="${#fields.hasErrors('description')}? 'has-error':''">
+        <div class="inp">
+          <input type="text" id="description" class="input-field"  placeholder="Description" style="width: 88%; border: none;" >
+        </div>
+        <p class="error-message" th:each="error : ${#fields.errors('description')}" th:text="${error}">Validation error
+                        </p>
+        </div>
+        <br>
+    
+          Image Upload <input type="file" id="myfile" name="filename" placeholder="Image Upload" style="width: 88%; border: none;" >
+        <br><br>
+        <button type="submit"  class="submit-btn">Submit</button></a>
+        <br><br>
+        <button type="submit"  class="submit-btn ">Reset</button></a>
+          
+                    
+                    
+               
+              
+        
+      </form>
+      
+    </div>
+    
+</body>
+ -->
 </html>

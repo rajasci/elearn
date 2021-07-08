@@ -9,7 +9,18 @@ body {
     border-radius: 0%;
     /* background-repeat: no-repeat; */
 }
-
+.bg-banner1 {
+    background-image: url(../images/bg22.jpg);
+    background-size: fill;
+    border-radius: 0%;
+    /* background-repeat: no-repeat; */
+}
+.bg-banner2 {
+    background-image: url(../images/bg221.jpg);
+    background-size: fill;
+    border-radius: 0%;
+    /* background-repeat: no-repeat; */
+}
 .color-grad {
      background: linear-gradient(to bottom, #dc3545 50%, #ff9933 100%);
 }
@@ -35,3 +46,40 @@ body {
 
 /* login forms ends  here  */
 
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: none;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  margin-left: 95%;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 140px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

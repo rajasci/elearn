@@ -1,112 +1,34 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
-<!-- 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
-
-    <title>Registration</title>
-</head>-->
-<head>
- <!-- Required meta tags -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css}" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm}" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
      <!-- Font Awesome -->
-     <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
 @import url('https://fonts.googleapis.com/css2?family=STIX+Two+Math&family=Staatliches&display=swap');
 </style>
      <!-- custom stylesheet -->
-     <link rel="stylesheet" th:href="@{../css/custom.css}">
-     <link rel="stylesheet" th:href="@{../css/login.css}">
-     <link rel="stylesheet" th:href="@{../index/css/custom.css}">
-     <link rel="stylesheet" th:href="@{../index/css/login.css}">
+     <link rel="stylesheet" href="css/custom.css">
+     <link rel="stylesheet" href="css/login.css">
     <title>Learn More</title>
 
 
 
-    <link rel="stylesheet" th:href="@{http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css}">
-<link th:href="@{../index/css/css1/multislider.css}" rel="stylesheet">
-<link th:href="@{../index/css/css1/slider_item.css}" rel="stylesheet">
-<link th:href="@{../index/css/css1/bootstrap.min.css}" rel="stylesheet">
-<link rel="stylesheet" type="text/css" th:href="@{https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css}" />
-</head>
-<!-- 
-<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-     <span class="sr-only">Toggle navigation</span> <span
-      class="icon-bar"></span> <span class="icon-bar"></span> <span
-      class="icon-bar"></span>
-    </button>
-                <a class="navbar-brand" href="#" th:href="@{/}">Registration and
-     Login Module</a>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li sec:authorize="isAuthenticated()"><a th:href="@{/trainer/logout}">Logout</a></li>
-                    <li sec:authorize="isAuthenticated()"><a th:href="@{/trainer/register}">Register</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href="css/css1/multislider.css" rel="stylesheet">
+<link href="css/css1/slider_item.css" rel="stylesheet">
+<link href="css/css1/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  </head>
 
-    <br>
-    <br>
-    <div class="container">
-        <h2>teacher User Registration and Login Module using Spring Boot, Spring MVC, Spring Security, JPA/Hibernate and Thymeleaf</h2>
 
-        <p>
-            Welcome <span sec:authentication="principal.username">User</span>
-        </p>
-    </div>
-    
-    <div class="panel panel-default container">
-    <div class="panel-body">published courses</div>
-    <table>
-    <tbody>
-    
-            <tr>  
-          <td th:each="courselist: ${courselist}">
-              
-              <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="" alt="Card image cap">
-              <div class="card-body">
-              <h5 class="card-title" th:text="${courselist.Course_name}">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-              <a th:href="@{'/content/' + ${courselist.course_id}+'/a/'+${courselist.user_id} }" class="btn btn-primary" >Delete</a>
-              <a th:href="@{/trainer/section(param1=${courselist.course_id},param2=${courselist.user_id})}" class="btn btn-primary" >Delete</a>
-              </div>
-            </div>
-          </td>
-        </tr>
-  </tbody>
-  </table>
-    <div>
-  
-  </div>
-</div>
-
-    <script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
-    <script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
-
-</body>
--->
-
-<body class="bg-light">
-<div th:if="${param.success}">
-                    <div class="alert alert-info">You've successfully added to a course!</div>
-                </div>
+  <body class="bg-light">
  
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
 
@@ -134,27 +56,27 @@
                 </li>
             </ul>
 
-            <a class="btn btn-light mx-2" th:href="@{#}" data-toggle="popover" data-trigger="focus" data-content="Get your team access to LearnIt's top 2,500 courses anytime, anywhere" title="Try LearnIt for Business" data-placement="bottom" href="#">LearnIt for Business</a>
-            <a class="btn btn-light mx-2" th:href="@{#}">Become an Instructor</a>
-            <a class="btn btn-light mx-2 rounded-circle" th:href="@{#}"><i class="fa fa-shopping-cart"></i></a>
-            <a class="btn btn-danger mx-1" th:href="@{#}">Sign In/Up</a>
+            <a class="btn btn-light mx-2" href="login2.html" data-toggle="popover" data-trigger="focus" data-content="Get your team access to LearnIt's top 2,500 courses anytime, anywhere" title="Try LearnIt for Business" data-placement="bottom" href="#">LearnIt for Business</a>
+            <a class="btn btn-light mx-2" href="become_an_instructor.html">Become an Instructor</a>
+            <a class="btn btn-light mx-2 rounded-circle" href="#"><i class="fa fa-shopping-cart"></i></a>
+            <a class="btn btn-danger mx-1" href="login.html">Sign In/Up</a>
             
 
            
         </div>
     </nav>
 
-    <div class="jumbotron mb-0 bg-banner2" style="height:500px; padding-top:150px">
+    <div class="jumbotron mb-0 bg-banner1" style="height:500px; padding-top:150px">
         <div class="container">
             <div class="row align-items-end">
                 <div class="col">
                     <div class="col-md-4 text-light" style="font-family: 'Staatliches', cursive; ">
-                        <h1 class="display-5" style="color: #dc3545;">Welcome Trainer.!</h1>
-                        <p class="lead" style="color: #EF6B3B;">The art of teaching is the art of assisting discovery.</p>
+                        <h1 class="display-5" style="color: #dc3545;">Come Teach with us.!</h1>
+                        <p class="lead" style="color: #fff;">Become an instructor and change lives — including your own</p>
                     </div>
                     <div class="col-md-6">  
                         <form class="form-inline my-2 my-lg-0">
-                            <button class="btn btn-lg btn-danger border-left-0 rounded-radius-right col-6 my-2 my-sm-0" type="submit">My Courses</i></button>
+                            <button class="btn btn-lg btn-danger border-left-0 rounded-radius-right col-7 my-2 my-sm-0" type="submit">Get Started</i></button>
                         </form>
                     </div>
                 </div>
@@ -162,49 +84,33 @@
         </div>
     </div>
 
-    <div class="color-grad text-light py-3" style="min-height: 50px;">
-        
-    </div>
-
-<br><br>
-
-
-<div class="container" >
-    <br>
-    <br>
-    <h1 style="color: #dc3545;font-family: 'Staatliches', cursive;" align="center">Your Timeline</h1><hr>
-    
-        <div class="container" align="center">
+    <div class="color-grad text-light py-3">
+        <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="media">
+                        <i class="fa fa-play-circle mr-3"></i>
                         <div class="media-body">
-                            <h2 class="mt-0"><b>1850</b></h2>
-                            <p style="color: #dc3545;" align="center">Students Taught</p>
+                            <h5 class="mt-0">Inspire learners</h5>
+                            <p>Teach what you know and help learners explore their interests, gain new skills, and advance their careers.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="media">
+                        <i class="fa fa-certificate mr-3"></i>
                         <div class="media-body">
-                            <h2 class="mt-0"><b>66</b></h2>
-                            <p style="color: #dc3545;" align="center">Courses</p>
+                            <h5 class="mt-0">Teach your way</h5>
+                            <p>Publish the course you want, in the way you want, and always have of control your own content.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="media">
+                        <i class="fa fa-spinner mr-3"></i>
                         <div class="media-body">
-                            <h2 class="mt-0"><b>8+</b></h2>
-                            <p style="color: #dc3545;" align="center">Years of Exp</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="media">
-                        <div class="media-body">
-                            <h2 class="mt-0"><b>1800+</b></h2>
-                            <p style="color: #dc3545;" align="center">Hours</p>
+                            <h5 class="mt-0">Get rewarded</h5>
+                            <p>Expand your professional network, build your expertise, and earn money on each paid enrollment</p>
                         </div>
                     </div>
                 </div>
@@ -215,12 +121,98 @@
 
 
 
-    
-<br><br>
-<div class="container">
+<div class="container" >
+    <br>
+    <br>
+    <h1 style="color: #dc3545;font-family: 'Staatliches', cursive;" align="center">How to begin</h1><hr>
+    <div class="row" >
+    <div class="col-md-4" align="center">
+        <h3 style="color: #dc3545;">Plan Your Curriculum</h3>
+        <br>
+        <img src="https://s.udemycdn.com/teaching/plan-your-curriculum-v2.svg" style="width: 60%;"><br><br>
+        <p><b>You start with your passion and knowledge.<br> Then choose a promising topic with the help of our Marketplace Insights tool.The way that you teach <br> what you bring to more of video for a paid course.more of video for a paid course.<br><br></b></p>
+
+    </div>
+    <div class="col-md-4" align="center"><h3 style="color: #dc3545;">
+        Record Your Video</h3>
+        <br>
+        <img src="https://s.udemycdn.com/teaching/record-your-video-v2.svg" style="width: 60%;"><br><br>
+        <p><b>Use basic tools like a smartphone or a DSLR camera. Add a good microphone and you’re ready to start.<br>If you don’t like being on camera, just capture your screen. Either way, we recommend two hours or more of video for a paid course.<br><br></b></p>
+    </div>
+    <div class="col-md-4" align="center"><h3 style="color: #dc3545;">
+        Launch Your Course</h3>
+        <br>
+        <img src="https://s.udemycdn.com/teaching/launch-your-course-v2.svg" style="width: 60%;"><br><br>
+        <p><b>Gather your first ratings and reviews by promoting your course through social media and your professional networks.<br>Your course will be discoverable in our marketplace where you earn revenue from each paid enrollment.<br><br></b></p>
+    </div>
+
+
+</div>
+
+</div>
+
+
+
+<br><br><br>
+    <div class="color-grad text-light py-3">
+        <div class="container" align="center">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="media">
+                        <div class="media-body">
+                            <h2 class="mt-0">40M</h2>
+                            <p>Students</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="media">
+                        <div class="media-body">
+                            <h2 class="mt-0">65+</h2>
+                            <p>Languages</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="media">
+                        <div class="media-body">
+                            <h2 class="mt-0">480M</h2>
+                            <p>Enrollments</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="media">
+                        <div class="media-body">
+                            <h2 class="mt-0">180+</h2>
+                            <p>Countries</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<br><br><br><br>
+<div class="container-fill">
+    <div class="row">
+    <div class="col-md-3">
+        <img src="https://s.udemycdn.com/teaching/support-1-v2.jpg" width="100%">
+    </div>
+    <div class="col-md-6" align="center">
+        <h1 style="color: #dc3545;font-family: 'Staatliches', cursive;" align="center">You won’t have to do it alone</h1><hr>
+        <br><br>
+        <h4>Our Instructor Support Team is here to answer your questions and review your test video, while our Teaching Center gives you plenty of resources to help you through the process. Plus, get the support of experienced instructors in our online community.</h4>
+    </div>
+    <div class="col-md-3">
+        <img src="https://s.udemycdn.com/teaching/support-2-v2.jpg" width="100%">
+    </div>
+</div>
+</div>
+ <br><br>
+    <div class="container">
         <br>
         <br>
-<h1 style="color: #dc3545;font-family: 'Staatliches', cursive;" align="center">Your top selling courses</h1><hr>
+<h1 style="color: #dc3545;font-family: 'Staatliches', cursive;" align="center">Choose your course from the one's in demand</h1><hr>
 
                   <div id="blogSlider">
                     <div class="MS-content">
@@ -228,7 +220,7 @@
                              <div class="product-grid">
                                  <div class="product-image">
                                      <a href="#">
-                                         <img class="pic-1" src="../product/1.jpg">
+                                         <img class="pic-1" src="product/1.jpg">
                                      </a>
                                      <ul class="social">
                                          <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
@@ -256,7 +248,7 @@
                              <div class="product-grid">
                                  <div class="product-image">
                                      <a href="#">
-                                         <img class="pic-1" th:src="@{product/2.jpg}">
+                                         <img class="pic-1" src="product/2.jpg">
                                      </a>
                                      <ul class="social">
                                          <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
@@ -286,7 +278,7 @@
                              <div class="product-grid">
                                  <div class="product-image">
                                      <a href="#">
-                                         <img class="pic-1" th:src="@{product/3.jpg}">
+                                         <img class="pic-1" src="product/3.jpg">
                                      </a>
                                      <ul class="social">
                                          <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
@@ -315,7 +307,7 @@
                              <div class="product-grid">
                                  <div class="product-image">
                                      <a href="#">
-                                         <img class="pic-1" th:src="@{product/4.jpg}">
+                                         <img class="pic-1" src="product/4.jpg">
                                      </a>
                                      <ul class="social">
                                          <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
@@ -343,7 +335,7 @@
                              <div class="product-grid">
                                  <div class="product-image">
                                      <a href="#">
-                                         <img class="pic-1" th:src="@{product/5.jpg}">
+                                         <img class="pic-1" src="product/5.jpg">
                                      </a>
                                      <ul class="social">
                                          <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
@@ -371,7 +363,7 @@
                              <div class="product-grid">
                                  <div class="product-image">
                                      <a href="#">
-                                         <img class="pic-1" th:src="@{product/6.jpg}">
+                                         <img class="pic-1" src="product/6.jpg">
                                      </a>
                                      <ul class="social">
                                          <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
@@ -400,7 +392,7 @@
                              <div class="product-grid">
                                  <div class="product-image">
                                      <a href="#">
-                                         <img class="pic-1" th:src="@{product/7.jpg}">
+                                         <img class="pic-1" src="product/7.jpg">
                                      </a>
                                      <ul class="social">
                                          <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
@@ -431,58 +423,6 @@
                      </div>
                      
                      </div>
-
-
-<br><br><br><br><br>
-<div class="container-fill">
-    <div class="row">
-    <div class="col-md-3">
-        <img th:src="@{https://s.udemycdn.com/home/non-student-cta/udlite-lohp-promo-ufb.jpg}" width="100%">
-    </div>
-    <div class="col-md-6" align="center">
-        <h1 style="color: #dc3545;font-family: 'Staatliches', cursive;" align="center">Add More courses</h1><hr>
-        <br><br>
-        <h4>Our Instructor Support Team is here to answer your questions and review your test video, while our Teaching Center gives you plenty of resources to help you through the process.</h4><br>
-        <a th:href="@{/trainer/register}"><button class="btn btn-lg btn-danger border-left-0 rounded-radius-right col-6 my-2 my-sm-0" id="myBtn" >Add Courses</i></button></a>
-        <div id="myModal" class="modal">
-        
-        
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <div class="form">
-          <form action="" method="post" role="form" class="contactForm">
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group col-md-6">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                <div class="validation"></div>
-              </div>
-            </div>
-           
-            <div class="form-group">
-              <textarea class="form-control" name="message" rows="3" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-              <div class="validation"></div>
-            </div>
-            <div class="text-center"><button type="submit" class="btn btn-success" style="background-color: #0c2e8a">Send Message</button></div>
-          </form>
-        </div>
-  </div>
-
-</div>
-
-    </div>
-    <div class="col-md-3">
-        <img th:src="@{../index/images/a1.jpg}" width="100%">
-    </div>
-</div>
-</div>
- <br><br>
-    
 
 <br><br>
     <div class="container mt-5">
@@ -606,9 +546,9 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script th:src="@{https://code.jquery.com/jquery-3.2.1.slim.min.js}" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js}" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script th:src="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js}" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   
     <!-- initialize popover library -->
     <script>
@@ -617,17 +557,17 @@
         });
     </script>
    
-    <script th:src="@{../index/main.js}"></script>
+    <script src="main.js"></script>
 
 
 
 
 
 
- <script th:src="@{../index/js/js1/bootstrap.min.js}"></script>
-   <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js}"></script>
-   <script th:src="@{../index/js/js1/multislider.min.js}"></script>
-   <script th:src="@{../index/js/js1/custom.js}"></script>
+ <script src="js/js1/bootstrap.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="js/js1/multislider.min.js"></script>
+   <script src="js/js1/custom.js"></script>
    
     
 
@@ -641,33 +581,7 @@ $('#blogSlider').multislider({
        
 //    </script>
 
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
 
 
 

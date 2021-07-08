@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login SignUp</title>
+	<link rel="stylesheet" type="text/css" href="loginStyle.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     
+  <!-- It will redirect to the Home Page after submitting the form -->
+  <script>
+  $(document).ready(function(){
+    $("form").submit(function(){
+      alert("Great Job !");
+    });
+  });
+  </script>
+</head>
+<body>
+	<style>
+		body {
+      	background-image: url('images/elearning3.jpg');
+      	background-repeat: no-repeat;
+      	background-attachment: fixed;  
+      	background-size:1518px 665px;
+     	}
+     </style>
+		<div class="form-box">
+			
+			
+			
+			<!-- Login Form -->
+			<form id="login" class="input-group" action="index.html">
+				<div class="inp">
+					<input type="text" id="fname" class="input-field" placeholder="First Name" style="width: 88%; border:none;" required="required">
+				</div>
+				<div class="inp">
+					<input type="text" id="lname" class="input-field" placeholder="Last Name" style="width: 88%; border: none;" required="required">
+				</div>
+				<div class="inp">
+					<input type="text" id="email" class="input-field" placeholder="Work Email" style="width: 88%; border: none;" >
+				</div>
+				<div class="inp">
+					<input type="text" id="phonenumber" class="input-field" placeholder="Phone Number" style="width: 88%; border: none;" >
+				</div>
+				<div class="inp">
+					<input type="text" id="Company Name" class="input-field" placeholder="Company Name" style="width: 88%; border:none;" >
+				</div>
+				<div class="inp">
+					<input type="text" id="jobtitle" class="input-field" placeholder="Job Title" style="width: 88%; border: none;" >
+				</div>
+				
+					
+                    
+                    <div class="inp" >
+
+                    	<select type="text" id="compsize"class="input-field" placeholder="Choose company size(number of employees" style="width: 100%; border: none;" >
+                       <option value="Choosevalue" >Choose Comapany size (number of employees) </option>
+                       <option value="1">1-199</option>
+                       <option value="200">200-1,999</option>
+                       <option value="1,999">1,999-5,000</option>
+                       <option value="5,001">5,001+</option>
+                   </select>
+               </div>
+               <div class="inp" >
+
+                    	<select type="text" id="compsize"class="input-field" placeholder="
+                    	How many people are you planning to teach" style="width: 100%; border: none;" >
+                       <option value="Choosevalue" style="background-color: transparent;">How many people are you planning to teach </option>
+                       <option value="j">Just myself</option>
+                       <option value="5">5-20</option>
+                       <option value="20">20-200</option>
+                       <option value="201">201-2000</option>
+                       <option value="2,001">2001+</option>
+                   </select>
+               </div>
+              <div class="inp">
+					<input type="text" id="needs" class="input-field" placeholder="What are your training needs" style="width: 88%; border: none;" >
+				</div>
+				<br><br><br>
+				<button type="submit" class="submit-btn">Get In Touch</button>
+			</form>
+			<!-- Registration Form -->
+			<form id="register" class="input-group">
+				<input type="text" class="input-field" placeholder="Full Name" required="required">
+				<input type="email" class="input-field" placeholder="Email Address" required="required">
+				<input type="password" class="input-field" placeholder="Create Password" name="psame" required="required">
+				<input type="password" class="input-field" placeholder="Confirm Password" name="psame" required="required">
+				<input type="checkbox" class="check-box" id="chkAgree" onclick="goFurther()">I agree to the Terms & Conditions
+				<button type="submit" id="btnSubmit" class="submit-btn reg-btn">Register</button>
+			</form>
+		</div>
+		<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
